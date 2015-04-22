@@ -16,10 +16,10 @@ PlatformGame.Game.prototype = {
         this.platforms.enableBody = true;
 
 		var ground = this.platforms.create(0, game.world.height - 128, 'platform');
-		var valorx = (game.world.width - 400)/400;
+		var valorx = (game.world.width)/400;
 		var valory = (game.world.height - (game.world.height - 128))/32;
 
-		ground.scale.setTo(Math.round(valorx)+1, Math.round(valory));
+		ground.scale.setTo(Math.round(valorx), Math.round(valory));
 
 		ground.body.immovable = true;
 
