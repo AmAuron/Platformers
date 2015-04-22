@@ -23,8 +23,8 @@ PlatformGame.Preload.prototype = {
 
 		//Loading Spritesheets
 
-		this.load.spritesheet('dude', 'assets/dude.png', 32, 48, 9);
-		this.load.spritesheet('dude', 'assets/dude.png', 32, 48, 4);
+		this.load.spritesheet('dude', 'assets/images/dude.png', 32, 48, 9);
+		this.load.spritesheet('baddie', 'assets/images/baddie.png', 32, 48, 4);
 
 		this.load.onLoadComplete.add(this.onLoadComplete, this);
 	},
