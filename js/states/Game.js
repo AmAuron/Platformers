@@ -33,7 +33,7 @@ PlatformGame.Game.prototype = {
 
 		this.player = this.game.add.sprite(32, game.world.height - 180, 'dude');
 			
-		this.game.physics.arcade.enable(player);
+		this.game.physics.arcade.enable(this.player);
 
 		this.player.body.bounce.y = 0.2;
 		this.player.body.gravity.y = 300;
