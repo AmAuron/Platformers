@@ -20,7 +20,7 @@ PlatformGame.Game.prototype = {
 
 		this.ground.body.immovable = true;
 
-		var ledges = this.platform.create(400, 400, 'platform');
+		var ledges = this.platforms.create(400, 400, 'platform');
 
 		this.ledges.body.immovable = true;
 
