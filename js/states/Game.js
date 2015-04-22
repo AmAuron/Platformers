@@ -15,7 +15,11 @@ PlatformGame.Game.prototype = {
 	    //  We will enable physics for any object that is created in this group
         this.platforms.enableBody = true;
 
-		var ground = this.platforms.create(0, game.world.height - 64, 'platform');
+		var ground = this.platforms.create(0, game.world.height - 128, 'platform');
+		var valorx = (game.world.width - 400)/400;
+		var valory = (game.world.height - (game.world.height - 128))/32;
+
+		ground.scale.setTo(valorx, valory);
 
 		ground.body.immovable = true;
 
