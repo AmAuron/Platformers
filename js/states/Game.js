@@ -12,7 +12,7 @@ PlatformGame.Game.prototype = {
 		//begin platforms creation
 		this.platforms = this.game.add.group();
 
-		this.platforms.enableBody = true;
+		this.game.physics.arcade.enableBody(this.platforms);
 
 		var ground = this.platforms.create(0, game.world.height - 64, 'platform');
 
@@ -20,11 +20,11 @@ PlatformGame.Game.prototype = {
 
 		var ledges = this.platform.create(400, 400, 'platform');
 
-		this.ledge.body.immovable = true;
+		this.ledges.body.immovable = true;
 
-		this.ledge = platforms.create(-150, 250, 'platform');
+		this.ledges = platforms.create(-150, 250, 'platform');
 
-		this.ledge.body.immovable = true;
+		this.ledges.body.immovable = true;
 
 		this.player = this.game.add.sprite(32, game.world.height - 150, 'dude');
 
