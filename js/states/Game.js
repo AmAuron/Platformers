@@ -19,7 +19,7 @@ PlatformGame.Game.prototype = {
 		var valorx = (game.world.width - 400)/400;
 		var valory = (game.world.height - (game.world.height - 128))/32;
 
-		ground.scale.setTo(valorx, valory);
+		ground.scale.setTo(Math.round(valorx), Math.round(valory));
 
 		ground.body.immovable = true;
 
@@ -31,7 +31,7 @@ PlatformGame.Game.prototype = {
 
 		ledges.body.immovable = true;
 
-		this.player = this.game.add.sprite(32, game.world.height - 150, 'dude');
+		this.player = this.game.add.sprite(32, game.world.height - 170, 'dude');
 		/*	
 		this.game.physics.arcade.enable(player);
 
