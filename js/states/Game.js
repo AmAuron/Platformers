@@ -7,7 +7,7 @@ PlatformGame.Game.prototype = {
 		this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
 	    //  A simple background for our game
-	    this.game.add.sprite(0, 0, this.game.width, 600, 'sky');
+	    this.game.add.tileSprite(0, 0, this.game.width, 600, 'sky');
 
 	    //  The platforms group contains the ground and the 2 ledges we can jump on
 	    this.platforms = game.add.group();
