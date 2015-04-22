@@ -31,8 +31,8 @@ PlatformGame.Game.prototype = {
 
 		ledges.body.immovable = true;
 
-		this.player = this.game.add.sprite(32, game.world.height - 170, 'dude');
-		/*	
+		this.player = this.game.add.sprite(32, game.world.height - 180, 'dude');
+			
 		this.game.physics.arcade.enable(player);
 
 		this.player.body.bounce.y = 0.2;
@@ -41,11 +41,11 @@ PlatformGame.Game.prototype = {
 
 		this.player.animations.add('left', [0,1,2,3], 10, true);
 		this.player.animations.add('right', [5,6,7,8], 10, true);
-		*/
+		
 	},
 
 	update: function(){
-		/*this.game.physics.arcade.collide(player, platforms);
+		this.game.physics.arcade.collide(player, platforms);
 
 		//reset velocity
 		player.body.velocity.x = 0;
@@ -77,6 +77,6 @@ PlatformGame.Game.prototype = {
 	    {
 	        player.body.velocity.y = -350;
 	    }
-	    */
+	    
 	}
 };
