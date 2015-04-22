@@ -13,10 +13,12 @@ PlatformGame.Game.prototype = {
 	    this.platforms = game.add.group();
 
 	    //  We will enable physics for any object that is created in this group
-	    this.platforms.enableBody = true;
+	    this.game.physics.enable(this.platforms);
+	    this.game.physics.arcade.enableBody(this.platforms);
 
 
 		var ground = this.platforms.create(0, game.world.height - 64, 'platform');
+
 
 		this.ground.body.immovable = true;
 
