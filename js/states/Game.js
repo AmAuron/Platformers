@@ -45,37 +45,37 @@ PlatformGame.Game.prototype = {
 	},
 
 	update: function(){
-		this.game.physics.arcade.collide(player, platforms);
+		this.game.physics.arcade.collide(this.player, this.platforms);
 
 		//reset velocity
-		player.body.velocity.x = 0;
+		this.player.body.velocity.x = 0;
 
 	    if (cursors.left.isDown)
 	    {
 	        //  Move to the left
-	        player.body.velocity.x = -150;
+	        this.player.body.velocity.x = -150;
 
-	        player.animations.play('left');
+	        this.player.animations.play('left');
 	    }
 	    else if (cursors.right.isDown)
 	    {
 	        //  Move to the right
-	        player.body.velocity.x = 150;
+	        this.player.body.velocity.x = 150;
 
-	        player.animations.play('right');
+	        this.player.animations.play('right');
 	    }
 	    else
 	    {
 	        //  Stand still
-	        player.animations.stop();
+	        this.player.animations.stop();
 
-	        player.frame = 4;
+	        this.player.frame = 4;
 	    }
 
 	    //  Allow the player to jump if they are touching the ground.
-	    if (cursors.up.isDown && player.body.touching.down)
+	    if (cursors.up.isDown && this.player.body.touching.down)
 	    {
-	        player.body.velocity.y = -350;
+	        this.player.body.velocity.y = -350;
 	    }
 	    
 	}
