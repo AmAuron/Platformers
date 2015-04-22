@@ -7,29 +7,25 @@ PlatformGame.Game.prototype = {
 		this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
 	    //  A simple background for our game
-	    this.game.add.sprite(0, 0, 'sky');
+	    this.game.add.sprite(0, 0, this.game.width, 600, 'sky');
 
 	    //  The platforms group contains the ground and the 2 ledges we can jump on
 	    this.platforms = game.add.group();
 
 	    //  We will enable physics for any object that is created in this group
-	    this.game.physics.enable(this.platforms);
-	    this.game.physics.arcade.enableBody(this.platforms);
-
+        this.platforms.enableBody = true;
 
 		var ground = this.platforms.create(0, game.world.height - 64, 'platform');
 
-		this.game.physics.arcade.enableBody(this.ground);
-
-		this.ground.body.immovable = true;
+		ground.body.immovable = true;
 
 		var ledges = this.platforms.create(400, 400, 'platform');
 
-		this.ledges.body.immovable = true;
+		ledges.body.immovable = true;
 
-		this.ledges = platforms.create(-150, 250, 'platform');
+		ledges = this.platforms.create(-150, 250, 'platform');
 
-		this.ledges.body.immovable = true;
+		ledges.body.immovable = true;
 
 		this.player = this.game.add.sprite(32, game.world.height - 150, 'dude');
 		/*	
