@@ -19,6 +19,7 @@ PlatformGame.Game.prototype = {
 
 		var ground = this.platforms.create(0, game.world.height - 64, 'platform');
 
+		this.game.physics.arcade.enableBody(this.ground);
 
 		this.ground.body.immovable = true;
 
