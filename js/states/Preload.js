@@ -35,7 +35,7 @@ PlatformGame.Preload.prototype = {
 
 	update: function(){
 		if(this.ready==true){
-			this.state.start('MainMenu');
+			this.state.start('Game');
 		}
 
 	},
