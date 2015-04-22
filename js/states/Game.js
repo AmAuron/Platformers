@@ -50,14 +50,14 @@ PlatformGame.Game.prototype = {
 		//reset velocity
 		this.player.body.velocity.x = 0;
 
-	    if (cursors.left.isDown)
+	    if (this.cursors.left.isDown)
 	    {
 	        //  Move to the left
 	        this.player.body.velocity.x = -150;
 
 	        this.player.animations.play('left');
 	    }
-	    else if (cursors.right.isDown)
+	    else if (this.cursors.right.isDown)
 	    {
 	        //  Move to the right
 	        this.player.body.velocity.x = 150;
@@ -73,7 +73,7 @@ PlatformGame.Game.prototype = {
 	    }
 
 	    //  Allow the player to jump if they are touching the ground.
-	    if (cursors.up.isDown && this.player.body.touching.down)
+	    if (this.cursors.up.isDown && this.player.body.touching.down)
 	    {
 	        this.player.body.velocity.y = -350;
 	    }
